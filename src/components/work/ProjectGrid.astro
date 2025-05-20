@@ -1,0 +1,97 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+const projects = [
+  {
+    title: 'HealthTrack Mobile App',
+    description: 'A comprehensive health and fitness tracking application designed to help users monitor their wellness journey.',
+    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'UX/UI Design',
+    slug: 'health-track-app'
+  },
+  {
+    title: 'E-commerce Redesign',
+    description: 'Complete redesign of an e-commerce platform focusing on improving conversion rates and user experience.',
+    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'Product Management',
+    slug: 'ecommerce-redesign'
+  },
+  {
+    title: 'Banking Dashboard',
+    description: 'Modern banking dashboard with intuitive data visualization and seamless transaction management.',
+    image: 'https://images.pexels.com/photos/6801874/pexels-photo-6801874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'UX/UI Design',
+    slug: 'banking-dashboard'
+  },
+  {
+    title: 'Social Media Platform',
+    description: 'A niche social media platform for creative professionals to showcase their work and connect with peers.',
+    image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'Product Management',
+    slug: 'social-media-platform'
+  },
+  {
+    title: 'Travel Booking Application',
+    description: 'End-to-end travel planning and booking application with personalized recommendations.',
+    image: 'https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'UX/UI Design',
+    slug: 'travel-booking-app'
+  },
+  {
+    title: 'Enterprise CRM System',
+    description: 'Complete overhaul of an enterprise CRM system to improve efficiency and user adoption.',
+    image: 'https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'Product Management',
+    slug: 'enterprise-crm'
+  }
+];
+---
+
+<section class="project-grid-section section">
+  <div class="container">
+    <h1>My Work</h1>
+    <p class="section-description">
+      A selection of recent projects that showcase my expertise in UX/UI design and product management.
+    </p>
+    
+    <div class="project-grid">
+      {projects.map((project, index) => (
+        <div class="project-grid-item" style={`animation-delay: ${index * 0.1}s`}>
+          <ProjectCard {...project} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-description {
+    max-width: 700px;
+    margin: 0 auto var(--space-xl);
+    text-align: center;
+    color: var(--color-medium-gray);
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .project-grid-item {
+    animation: slideUp var(--transition-medium) forwards;
+    opacity: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .project-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

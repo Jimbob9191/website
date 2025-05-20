@@ -1,0 +1,113 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-left">
+        <p class="footer-logo">james</p>
+        <p class="footer-tagline">UX/UI Designer & Product Manager</p>
+      </div>
+      
+      <div class="footer-right">
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h4>Pages</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/work">Work</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a></li>
+              <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a></li>
+              <li><a href="mailto:hello@james.com">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} James. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding: var(--space-xl) 0 var(--space-md);
+    background-color: var(--color-lighter-gray);
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+  }
+  
+  .footer-logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+  }
+  
+  .footer-tagline {
+    color: var(--color-medium-gray);
+    margin-bottom: 0;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+  }
+  
+  .footer-links-column h4 {
+    font-size: 1rem;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .footer-links-column ul {
+    list-style: none;
+  }
+  
+  .footer-links-column li {
+    margin-bottom: var(--space-xs);
+  }
+  
+  .footer-links-column a {
+    color: var(--color-medium-gray);
+    transition: color var(--transition-fast);
+  }
+  
+  .footer-links-column a:hover {
+    color: var(--color-dark-gray);
+  }
+  
+  .footer-bottom {
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
+    color: var(--color-light-gray);
+  }
+  
+  @media (min-width: 768px) {
+    .footer-content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .footer-links {
+      gap: var(--space-xxl);
+    }
+  }
+</style>

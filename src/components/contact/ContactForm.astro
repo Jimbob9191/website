@@ -1,0 +1,208 @@
+---
+---
+
+<section class="contact-section section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info animate-fade-in">
+        <h1>Get in Touch</h1>
+        <p class="contact-description">
+          I'm always interested in new opportunities, collaborations, or just a friendly chat about design and technology. Feel free to reach out!
+        </p>
+        
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6ZM20 6L12 11L4 6H20ZM20 18H4V8L12 13L20 8V18Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:hello@james.com">hello@james.com</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-detail-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 6C13.1 6 14 6.9 14 8C14 9.1 13.1 10 12 10C10.9 10 10 9.1 10 8C10 6.9 10.9 6 12 6ZM12 13C9.33 13 4 14.34 4 17V20H20V17C20 14.34 14.67 13 12 13ZM18 18H6V17.01C6.2 16.29 9.3 15 12 15C14.7 15 17.8 16.29 18 17V18Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Connect</h3>
+              <p>
+                <a href="https://linkedin.com/" target="_blank">LinkedIn</a> / 
+                <a href="https://dribbble.com/" target="_blank">Dribbble</a> / 
+                <a href="https://twitter.com/" target="_blank">Twitter</a>
+              </p>
+            </div>
+          </div>
+          
+          <div class="contact-detail-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 7H13V13H11V7ZM11 15H13V17H11V15Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Availability</h3>
+              <p>I'm currently available for freelance projects and consulting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-container animate-slide-up">
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .contact-description {
+    margin-bottom: var(--space-lg);
+    color: var(--color-medium-gray);
+  }
+  
+  .contact-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .contact-detail-item {
+    display: flex;
+    gap: var(--space-md);
+  }
+  
+  .contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(0, 113, 227, 0.1);
+    color: var(--color-accent);
+  }
+  
+  .contact-detail-item h3 {
+    margin-bottom: var(--space-xs);
+    font-size: 1.125rem;
+  }
+  
+  .contact-detail-item p {
+    color: var(--color-medium-gray);
+    margin-bottom: 0;
+  }
+  
+  .contact-form-container {
+    background-color: var(--color-white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    padding: var(--space-xl);
+  }
+  
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: 500;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    transition: border-color var(--transition-fast);
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.1);
+  }
+  
+  button[type="submit"] {
+    margin-top: var(--space-sm);
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-details {
+      gap: var(--space-xl);
+    }
+  }
+</style>
+
+<script>
+  const contactForm = document.querySelector('.contact-form');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // In a real implementation, you would send the form data to a server
+      // For now, we'll just simulate a successful submission
+      
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      const formValues = Object.fromEntries(formData.entries());
+      
+      console.log('Form submitted:', formValues);
+      
+      // Show success message
+      form.innerHTML = `
+        <div class="success-message">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#34c759"/>
+          </svg>
+          <h3>Message Sent!</h3>
+          <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+        </div>
+      `;
+    });
+  }
+</script>

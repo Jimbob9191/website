@@ -1,0 +1,452 @@
+---
+export function getStaticPaths() {
+  const projects = [
+    {
+      slug: 'health-track-app',
+      title: 'HealthTrack Mobile App',
+      category: 'UX/UI Design',
+      client: 'HealthTrack Inc.',
+      duration: '3 months',
+      year: '2024',
+      hero: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      overview: 'A comprehensive health and fitness tracking application designed to help users monitor their wellness journey.',
+      challenge: 'The client needed a comprehensive health tracking application that would allow users to track various aspects of their health journey, from exercise and nutrition to sleep and mental wellness. The challenge was to create an intuitive interface that would make complex health data accessible and actionable for users of all technical abilities.',
+      process: [
+        'Conducted user research with target demographics to understand health tracking needs',
+        'Created user personas and journey maps to guide the design process',
+        'Developed information architecture and user flows',
+        'Designed low-fidelity wireframes and high-fidelity mockups',
+        'Built interactive prototypes for usability testing',
+        'Conducted multiple rounds of user testing and iterative refinement'
+      ],
+      solution: 'The final design features a dashboard-centered approach with customizable widgets that allow users to prioritize the health metrics most important to them. The app uses a clean, minimal interface with clear data visualization and encourages users through achievement systems and personalized insights. The navigation was simplified to focus on key actions, and the onboarding process was streamlined to get users tracking their health metrics quickly.',
+      outcomes: [
+        '32% increase in daily active users',
+        '27% improvement in user retention over 30 days',
+        '85% of users reported the app was "easy" or "very easy" to use',
+        'Featured in the App Store\'s "Apps We Love" section'
+      ],
+      images: [
+        'https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.pexels.com/photos/3183188/pexels-photo-3183188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      ]
+    },
+    {
+      slug: 'ecommerce-redesign',
+      title: 'E-commerce Redesign',
+      category: 'Product Management',
+      client: 'Fashion Forward',
+      duration: '5 months',
+      year: '2023',
+      hero: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      overview: 'Complete redesign of an e-commerce platform focusing on improving conversion rates and user experience.',
+      challenge: 'Fashion Forward, a growing e-commerce clothing brand, was experiencing high cart abandonment rates and poor mobile conversion. The existing platform had evolved organically over years, resulting in inconsistent UX patterns, slow performance, and a checkout process that frustrated users. My task was to lead a complete redesign to improve key metrics while maintaining the brand\'s distinctive aesthetic.',
+      process: [
+        'Conducted a comprehensive UX audit and competitive analysis',
+        'Analyzed quantitative data from analytics and heat maps',
+        'Facilitated workshops with stakeholders to align on goals and priorities',
+        'Developed a product roadmap for phased implementation',
+        'Coordinated cross-functional teams including design, development, and marketing',
+        'Implemented A/B testing for key conversion elements'
+      ],
+      solution: 'As Product Manager, I led the redesign with a mobile-first approach, simplifying the information architecture and implementing a streamlined checkout process that reduced steps by 40%. We developed a component-based design system for consistency and faster implementation. Performance optimizations reduced page load times by 60%, and we introduced personalized product recommendations based on browsing behavior.',
+      outcomes: [
+        '27% increase in conversion rate',
+        '42% reduction in cart abandonment',
+        '53% improvement in mobile conversion',
+        '35% increase in average order value through improved cross-selling'
+      ],
+      images: [
+        'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.pexels.com/photos/5632379/pexels-photo-5632379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      ]
+    },
+    {
+      slug: 'banking-dashboard',
+      title: 'Banking Dashboard',
+      category: 'UX/UI Design',
+      client: 'NextGen Financial',
+      duration: '4 months',
+      year: '2024',
+      hero: 'https://images.pexels.com/photos/6801874/pexels-photo-6801874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      overview: 'Modern banking dashboard with intuitive data visualization and seamless transaction management.',
+      challenge: 'NextGen Financial needed to transform their outdated banking portal into a modern, user-friendly dashboard that would appeal to both traditional customers and younger, tech-savvy users. The existing system was functional but suffered from information overload, confusing navigation, and an outdated visual design that undermined trust in the digital banking experience.',
+      process: [
+        'Conducted stakeholder interviews to understand business goals and technical constraints',
+        'Performed user research including interviews and usability testing of the existing platform',
+        'Created user personas representing different customer segments',
+        'Developed information architecture focusing on task prioritization',
+        'Designed wireframes and high-fidelity prototypes',
+        'Conducted iterative usability testing with target users'
+      ],
+      solution: 'I designed a clean, modern dashboard that prioritizes the most common banking tasks while making advanced features accessible through progressive disclosure. The new interface features clear data visualization of spending patterns, account balances, and financial goals. Custom-designed icons and illustrations help users understand complex financial concepts, and a cohesive color system indicates different account types and transaction categories.',
+      outcomes: [
+        '67% improvement in user satisfaction scores',
+        '42% reduction in customer service calls related to digital banking',
+        '28% increase in digital banking adoption among users over 55',
+        '52% increase in usage of advanced financial planning features'
+      ],
+      images: [
+        'https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      ]
+    },
+    {
+      slug: 'social-media-platform',
+      title: 'Social Media Platform',
+      category: 'Product Management',
+      client: 'Creative Connect',
+      duration: '8 months',
+      year: '2023',
+      hero: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      overview: 'A niche social media platform for creative professionals to showcase their work and connect with peers.',
+      challenge: 'Creative Connect wanted to build a specialized social platform for designers, photographers, and other creative professionals that would focus on high-quality portfolio presentation and meaningful industry connections. They needed a product strategy that would differentiate their platform in a crowded social media landscape and attract both individual creatives and agencies looking for talent.',
+      process: [
+        'Led market research to identify gaps in existing creative platforms',
+        'Facilitated user interviews with target creative professionals',
+        'Developed the product vision and strategy',
+        'Created a prioritized feature roadmap',
+        'Coordinated cross-functional teams through agile development cycles',
+        'Established KPIs and analytics implementation plan'
+      ],
+      solution: 'As Product Manager, I guided the development of a platform that combines portfolio showcase capabilities with professional networking features. The product strategy focused on three key differentiators: advanced portfolio customization options, AI-powered talent matching for projects, and verified reviews from clients. I implemented a phased launch approach, starting with core portfolio features and gradually introducing networking and monetization capabilities.',
+      outcomes: [
+        'Successfully launched with 15,000 creative professionals in beta phase',
+        'Achieved 42% month-over-month growth in the first six months',
+        'Facilitated over 500 paid project connections in first year',
+        '87% of surveyed users reported finding the platform more valuable than general social networks for professional purposes'
+      ],
+      images: [
+        'https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.pexels.com/photos/3194518/pexels-photo-3194518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      ]
+    },
+    {
+      slug: 'travel-booking-app',
+      title: 'Travel Booking Application',
+      category: 'UX/UI Design',
+      client: 'Wanderlust',
+      duration: '6 months',
+      year: '2023',
+      hero: 'https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      overview: 'End-to-end travel planning and booking application with personalized recommendations.',
+      challenge: 'Wanderlust, a travel startup, needed a comprehensive mobile application that would simplify the complex process of travel planning and booking. The challenge was to create an intuitive interface that would guide users through discovering destinations, planning itineraries, and booking accommodations and activities, all while providing personalized recommendations based on user preferences and behavior.',
+      process: [
+        'Created user personas and journey maps based on traveler research',
+        'Mapped the end-to-end customer journey from inspiration to post-trip',
+        'Developed information architecture and user flows',
+        'Created wireframes focusing on key booking and planning workflows',
+        'Designed high-fidelity mockups and interactive prototypes',
+        'Conducted usability testing with frequent travelers'
+      ],
+      solution: 'I designed an application that combines visual inspiration with practical planning tools. The interface uses immersive photography and video to spark wanderlust while providing intuitive planning tools that simplify complex travel arrangements. The design features a modular trip builder, personalized recommendation engine, and offline accessibility for key travel information. Special attention was paid to creating a seamless booking flow that reduced friction and abandonment.',
+      outcomes: [
+        '48% higher booking completion rate compared to industry average',
+        '62% of users created and saved personalized itineraries',
+        '4.8/5 average rating on app stores',
+        '37% of users returned to the app for a second trip within 6 months'
+      ],
+      images: [
+        'https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.pexels.com/photos/7778287/pexels-photo-7778287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      ]
+    },
+    {
+      slug: 'enterprise-crm',
+      title: 'Enterprise CRM System',
+      category: 'Product Management',
+      client: 'Global Solutions Inc.',
+      duration: '10 months',
+      year: '2022',
+      hero: 'https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      overview: 'Complete overhaul of an enterprise CRM system to improve efficiency and user adoption.',
+      challenge: 'Global Solutions Inc. was struggling with a legacy CRM system that had poor user adoption, fragmented data, and high maintenance costs. As the company expanded internationally, the system couldn\'t scale effectively to support global operations and evolving business processes. The challenge was to redesign the CRM from the ground up while ensuring minimal disruption to ongoing business operations.',
+      process: [
+        'Conducted stakeholder workshops and user interviews across departments',
+        'Analyzed existing workflows and identified pain points',
+        'Developed a comprehensive product requirements document',
+        'Created a phased implementation roadmap',
+        'Coordinated with IT, sales, and customer service teams',
+        'Implemented change management and training strategy'
+      ],
+      solution: 'As Product Manager, I led a complete redesign of the CRM system focusing on workflow automation, data integration, and intuitive UI. The solution included customizable dashboards for different user roles, advanced reporting capabilities, and seamless integration with marketing automation tools. I implemented a modular architecture to support global operations with regional customizations while maintaining data consistency.',
+      outcomes: [
+        '78% improvement in user adoption across all departments',
+        '63% reduction in time spent on manual data entry',
+        '42% increase in sales team productivity',
+        '$2.4M annual savings from operational efficiencies and reduced maintenance costs'
+      ],
+      images: [
+        'https://images.pexels.com/photos/7054527/pexels-photo-7054527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.pexels.com/photos/4386390/pexels-photo-4386390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      ]
+    }
+  ];
+  
+  return projects.map(project => {
+    return {
+      params: { slug: project.slug },
+      props: { project }
+    };
+  });
+}
+
+import Layout from '../../layouts/Layout.astro';
+const { project } = Astro.props;
+---
+
+<Layout 
+  title={`${project.title} - James UX/UI Designer & Product Manager`}
+  description={project.overview}
+>
+  <div class="project-detail">
+    <div class="project-hero">
+      <img src={project.hero} alt={project.title} class="project-hero-image" />
+    </div>
+    
+    <div class="container">
+      <div class="project-content">
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-category">{project.category}</span>
+            <h1>{project.title}</h1>
+            <p class="project-overview">{project.overview}</p>
+          </div>
+          
+          <div class="project-info">
+            <div class="project-info-item">
+              <h3>Client</h3>
+              <p>{project.client}</p>
+            </div>
+            
+            <div class="project-info-item">
+              <h3>Duration</h3>
+              <p>{project.duration}</p>
+            </div>
+            
+            <div class="project-info-item">
+              <h3>Year</h3>
+              <p>{project.year}</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-section">
+          <h2>The Challenge</h2>
+          <p>{project.challenge}</p>
+        </div>
+        
+        <div class="project-section">
+          <h2>Process</h2>
+          <ul class="process-list">
+            {project.process.map(step => (
+              <li>{step}</li>
+            ))}
+          </ul>
+        </div>
+        
+        <div class="project-images">
+          {project.images.map(image => (
+            <div class="project-image-container">
+              <img src={image} alt="Project visual" class="project-image" />
+            </div>
+          ))}
+        </div>
+        
+        <div class="project-section">
+          <h2>Solution</h2>
+          <p>{project.solution}</p>
+        </div>
+        
+        <div class="project-section">
+          <h2>Outcomes</h2>
+          <ul class="outcomes-list">
+            {project.outcomes.map(outcome => (
+              <li>{outcome}</li>
+            ))}
+          </ul>
+        </div>
+        
+        <div class="project-navigation">
+          <a href="/work" class="btn-secondary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back to All Projects
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .project-detail {
+    padding-bottom: var(--space-xxl);
+  }
+  
+  .project-hero {
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    margin-top: calc(-1 * var(--space-xl));
+    background: var(--color-white);
+    border-radius: 16px 16px 0 0;
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+  }
+  
+  .project-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+  
+  .project-category {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .project-overview {
+    font-size: 1.25rem;
+    color: var(--color-medium-gray);
+    margin-top: var(--space-sm);
+  }
+  
+  .project-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    background-color: var(--color-lighter-gray);
+    padding: var(--space-md);
+    border-radius: 8px;
+  }
+  
+  .project-info-item h3 {
+    font-size: 0.875rem;
+    margin-bottom: var(--space-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-medium-gray);
+  }
+  
+  .project-info-item p {
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  
+  .project-section {
+    margin-bottom: var(--space-xl);
+  }
+  
+  .project-section h2 {
+    margin-bottom: var(--space-md);
+    position: relative;
+    padding-bottom: var(--space-xs);
+    display: inline-block;
+  }
+  
+  .project-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-accent);
+  }
+  
+  .process-list,
+  .outcomes-list {
+    list-style: none;
+  }
+  
+  .process-list li,
+  .outcomes-list li {
+    padding: var(--space-sm) 0;
+    position: relative;
+    padding-left: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .process-list li:last-child,
+  .outcomes-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .process-list li::before,
+  .outcomes-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1.25rem;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+  }
+  
+  .project-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+  
+  .project-image-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    transition: transform var(--transition-medium);
+  }
+  
+  .project-image-container:hover .project-image {
+    transform: scale(1.02);
+  }
+  
+  .project-navigation {
+    margin-top: var(--space-xl);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+  
+  @media (min-width: 768px) {
+    .project-header {
+      grid-template-columns: 2fr 1fr;
+      align-items: start;
+    }
+    
+    .project-images {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

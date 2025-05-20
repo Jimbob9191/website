@@ -1,0 +1,217 @@
+---
+---
+
+<section class="about-section section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-container animate-fade-in">
+        <img
+          src="https://images.pexels.com/photos/3778603/pexels-photo-3778603.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="James at work"
+          class="about-image"
+        />
+      </div>
+      
+      <div class="about-content animate-slide-up">
+        <h1>About Me</h1>
+        <p class="lead">
+          I'm James, a UX/UI designer and product manager passionate about creating intuitive, beautiful, and meaningful digital experiences.
+        </p>
+        
+        <p>
+          With over 8 years of experience in the design industry, I've worked with startups, agencies, and enterprise companies to deliver user-centered solutions that drive business growth and enhance user satisfaction.
+        </p>
+        
+        <p>
+          My approach combines strategic thinking with creative problem-solving. I believe in deeply understanding user needs, business goals, and technical constraints to create thoughtful design solutions that make an impact.
+        </p>
+        
+        <div class="about-sections">
+          <div class="about-section-item">
+            <h3>Design Philosophy</h3>
+            <p>
+              I believe great design should be invisible. It should feel natural and intuitive, guiding users without them noticing the design itself. My work aims to create experiences that delight users while achieving business objectives.
+            </p>
+          </div>
+          
+          <div class="about-section-item">
+            <h3>My Process</h3>
+            <p>
+              My design process is collaborative and iterative. I start with research to understand the problem space, then move to ideation, prototyping, testing, and refinement. I value user feedback throughout the process to ensure the final product meets real needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills-section section">
+  <div class="container">
+    <h2 class="section-title">Skills & Expertise</h2>
+    
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>UX Design</h3>
+        <ul class="skill-list">
+          <li>User Research</li>
+          <li>Information Architecture</li>
+          <li>Wireframing</li>
+          <li>Prototyping</li>
+          <li>Usability Testing</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>UI Design</h3>
+        <ul class="skill-list">
+          <li>Visual Design</li>
+          <li>Interaction Design</li>
+          <li>Design Systems</li>
+          <li>Typography</li>
+          <li>Color Theory</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Product Management</h3>
+        <ul class="skill-list">
+          <li>Product Strategy</li>
+          <li>Roadmapping</li>
+          <li>Feature Prioritization</li>
+          <li>User Stories</li>
+          <li>Stakeholder Management</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Tools</h3>
+        <ul class="skill-list">
+          <li>Figma</li>
+          <li>Sketch</li>
+          <li>Adobe Creative Suite</li>
+          <li>Jira</li>
+          <li>Miro</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .about-image-container {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    transition: transform var(--transition-slow);
+  }
+  
+  .about-image-container:hover .about-image {
+    transform: scale(1.02);
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    color: var(--color-dark-gray);
+    margin-bottom: var(--space-md);
+  }
+  
+  .about-sections {
+    margin-top: var(--space-xl);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .about-section-item h3 {
+    margin-bottom: var(--space-sm);
+    position: relative;
+    padding-bottom: var(--space-xs);
+  }
+  
+  .about-section-item h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-accent);
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .skill-category h3 {
+    margin-bottom: var(--space-md);
+    position: relative;
+    display: inline-block;
+    padding-bottom: var(--space-xs);
+  }
+  
+  .skill-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+  }
+  
+  .skill-list {
+    list-style: none;
+  }
+  
+  .skill-list li {
+    padding: var(--space-xs) 0;
+    position: relative;
+    padding-left: var(--space-md);
+  }
+  
+  .skill-list li::before {
+    content: '•';
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+  
+  @media (min-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xxl);
+      align-items: center;
+    }
+    
+    .about-sections {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .skills-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
