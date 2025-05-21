@@ -137,6 +137,12 @@ p {
   text-align: center;
 }
 
+.highlight {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
