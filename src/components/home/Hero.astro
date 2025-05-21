@@ -5,7 +5,7 @@
   <div class="container">
     <div class="hero-content">
       <h1 class="animate-slide-up">
-        Hey, I'm James.
+        Hey, I'm <span class="animated-text">James.</span>
       </h1>
       <p class="hero-description animate-slide-up" style="animation-delay: 0.1s;">
         I craft digital experiences that blend aesthetics with functionality, 
@@ -46,6 +46,11 @@
   .hero h1 {
     margin-bottom: var(--space-md);
     line-height: 1.1;
+  }
+  
+  .animated-text {
+    display: inline-block;
+    min-width: 200px;
   }
   
   .hero-description {
@@ -94,3 +99,42 @@
     }
   }
 </style>
+
+<script>
+  const words = ['James.', 'a designer.', 'a strategist.', 'a problem-solver.', 'a builder.', 'an explorer.'];
+  let currentIndex = 0;
+  const animatedText = document.querySelector('.animated-text');
+
+  if (animatedText) {
+    setTimeout(() => {
+      async function typeText(text) {
+        let currentText = '';
+        for (const char of text) {
+          currentText += char;
+          animatedText.textContent = currentText;
+          await new Promise(resolve => setTimeout(resolve, 100));
+        }
+      }
+
+      async function deleteText() {
+        let text = animatedText.textContent;
+        while (text.length > 0) {
+          text = text.slice(0, -1);
+          animatedText.textContent = text;
+          await new Promise(resolve => setTimeout(resolve, 50));
+        }
+      }
+
+      async function animateText() {
+        while (true) {
+          await typeText(words[currentIndex]);
+          await new Promise(resolve => setTimeout(resolve, 2000));
+          await deleteText();
+          currentIndex = (currentIndex + 1) % words.length;
+        }
+      }
+
+      animateText();
+    }, 5000);
+  }
+</script>
