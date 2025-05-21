@@ -7,6 +7,10 @@
       <h1 class="animate-slide-up">
         Hey, I'm <span class="animated-text">James.</span>
       </h1>
+      <p class="hero-description animate-slide-up" style="animation-delay: 0.1s;">
+        I craft digital experiences that blend aesthetics with functionality, 
+        creating products that users love and businesses value.
+      </p>
       <div class="hero-buttons animate-slide-up" style="animation-delay: 0.2s;">
         <a href="/work" class="btn">View My Work</a>
         <a href="/contact" class="btn-secondary">Get in Touch</a>
@@ -47,6 +51,15 @@
   .animated-text {
     display: inline-block;
     min-width: 200px;
+  }
+  
+  .hero-description {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    color: var(--color-medium-gray);
+    margin-bottom: var(--space-lg);
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .hero-buttons {
